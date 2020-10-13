@@ -1,29 +1,10 @@
+import Widget from './Widget';
+
 const btnCircle = document.querySelector('.btn-circle');
-const chatContainer = document.querySelector('.chat-container');
+const container = document.querySelector('.comment-container');
 
-btnCircle.addEventListener('click', () => {
-  btnCircle.classList.remove('active');
-  btnCircle.classList.add('hidden');
-  chatContainer.classList.remove('hidden');
-  chatContainer.classList.add('active');
+btnCircle.addEventListener('click', (e) => {
+  const widget = new Widget(container, e.currentTarget);
 
-  const form = chatContainer.querySelector('.form-widget');
-  const close = chatContainer.querySelector('.btn-close');
-
-  function formClose(thisForm) {
-    thisForm.reset();
-    chatContainer.classList.remove('active');
-    chatContainer.classList.add('hidden');
-    btnCircle.classList.remove('hidden');
-    btnCircle.classList.add('active');
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    formClose(form);
-  });
-
-  close.addEventListener('click', () => {
-    formClose(form);
-  });
+  widget.createWidget();
 });

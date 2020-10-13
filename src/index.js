@@ -5,3 +5,4 @@ import './js/Chat';
 import './js/Liker';
 import './image/close-btn.png';
 import './image/heart.png';
+import './js/Widget';

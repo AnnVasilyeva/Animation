@@ -84,7 +84,7 @@ h2 {
 /* Task 2*/
 
 
-.chat-container {
+.widget {
     width: 300px;
     box-shadow: 2px 3px 53px 2px rgba(171,171,171,1);
     padding: 20px;
@@ -93,11 +93,11 @@ h2 {
 
 }
 
-.chat-container.hidden {
+.widget.hidden {
     animation: 100ms linear 1 forwards hidden;
 }
 
-.chat-container.active {
+.widget.active {
     animation: 100ms linear 1 forwards show;
 }
 
